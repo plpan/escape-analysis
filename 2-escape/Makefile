@@ -1,4 +1,4 @@
-DEPS=1closurecall 2indirectassign 3container 4functionreceiver 5interface 6structfields
+DEPS=1closurecall 2indirectassign 3container 4functionreceiver 5interface 6structfields 7slicetransform
 
 all: clean $(DEPS)
 
