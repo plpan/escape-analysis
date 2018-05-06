@@ -1,4 +1,4 @@
-DEPS=1closurecall 2indirectassign 3container 4functionreceiver
+DEPS=1closurecall 2indirectassign 3container 4functionreceiver 5interface
 
 all: clean $(DEPS)
 

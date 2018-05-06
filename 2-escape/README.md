@@ -7,3 +7,5 @@
 	- 对slice和map的间接赋值也会导致变量逃逸
 4. function receiver
 	- 将变量赋值给函数receiver指针成员，会导致变量逃逸
+5. interface call function
+	- 接口类型调用方法，该接口变量会逃逸
