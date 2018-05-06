@@ -13,3 +13,7 @@
 	- 这里牵涉到引用层级的问题（这个后面再介绍），结构体的多个字段是作为一个整体，对一些字段的引用会导致其他字段的引用发生逃逸
 7. byte slice/string transform
 	- 字符串和字节数组的转化会导致变量逃逸
+	
+更完备的逃逸情况请参考：
+1. https://github.com/golang/go/blob/master/test/escape2.go
+2. https://github.com/golang/go/blob/master/test/escape2n.go
