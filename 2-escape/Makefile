@@ -1,9 +1,9 @@
-DEPS=1closurecall 2indirectassign
+DEPS=1closurecall 2indirectassign 3container 4functionreceiver
 
 all: clean $(DEPS)
 
 $(DEPS): %: %.go
-	go build -gcflags="-N -l -m" -o $@ $<
+	go build -gcflags="-N -l -m -m" -o $@ $<
 
 clean:
 	-@rm $(DEPS)
