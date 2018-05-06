@@ -1,11 +1,11 @@
-DEPS=1closurecall
+DEPS=1closurecall 2indirectassign
 
-all: clean alldeps
+all: clean $(DEPS)
 
-alldeps:
-	$(foreach dep,$(DEPS),	go build -gcflags="-N -l -m" -o $(dep) $(dep).go)
+$(DEPS): %: %.go
+	go build -gcflags="-N -l -m" -o $@ $<
 
 clean:
-	$(foreach dep,$(DEPS),	-@rm $(dep))
+	-@rm $(DEPS)
 
-.PHONY: all clean alldeps
+.PHONY: all clean $(DEPS)
